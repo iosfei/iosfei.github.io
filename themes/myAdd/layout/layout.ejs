@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title><%= config.title %></title>
+             <!-- 引入站点的标题-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <%- css('./css/app.css') %>
+          <!-- 这里的css 就是一个辅助函数-->
+    </head>
+    <body>
+            <%- partial('_partial/head') %>
+            
+            <!-- 引入其他部分-->
+            <main>
+				<%- partial('index.ejs') %> 
+				<!-- <%- partial('post.ejs') %> -->
+				<%- include('post.ejs') %>
+                <!-- 这里会将其他页面的内容填充进来组成一个完整的页面 -->
+            </main>
+    </body>
+</html>

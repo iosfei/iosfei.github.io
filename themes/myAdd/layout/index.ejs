@@ -1,0 +1,16 @@
+<% site.posts.forEach(function(post){ %>
+	<p>
+        <%- post.path %>
+        <br />
+        <%- post.slug %>
+        <br />
+        <%- post._id %>
+        <br />
+        <%- post.title %>
+        <br />
+        <%- post.date %>
+        <br />
+
+        <a href="/<%- post.path %>"><%- post.title %></a>
+	</p>
+    <% }); %>

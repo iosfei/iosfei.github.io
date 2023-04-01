@@ -1,0 +1,13 @@
+<!-- 点击文章 -->
+ <%- partial('_partial/header') %>
+<div class="container" >
+	<article class="post">
+		<h1 class="post-title"><%= page.title %></h1>
+		
+		<span class="post-date"><%- date( page.date , 'YYYY/MM/DD HH:mm') %> </span>
+		<div class="content post-con">
+			<%- page.content %>
+		</div>
+	</article>
+</div>
+ <%- partial('_partial/footer') %>
