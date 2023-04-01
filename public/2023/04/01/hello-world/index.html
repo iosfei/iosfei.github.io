@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+ <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Hello World | Websites</title>
+	
+	<meta name="keywords" content="这是网站关键词,这是网站关键词,这是网站关键词,这是网站关键词">
+	
+	
+	<meta name="description" content="这是网站描述,这是网站描述">
+	
+	
+	<!-- Bootstrap -->
+
+	<link rel="stylesheet" href="/bootstrap-icons.css">
+	<link rel="stylesheet" href="/swiper-bundle.min.css">
+	<link rel="stylesheet" href="/bootstrap.min.css">
+	<link rel="stylesheet" href="/style.css">
+	
+	
+<script src="/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+ 
+<body data-offset="0" data-spy="scroll" data-target="#navbar-example">
+
+
+<!-- 必须body,不能用index -->
+<!-- 点击文章 -->
+ <div class="post-new">
+	<div class="post-nav">
+		
+		  <a href="/" >首页</a>
+		
+	</div>
+</div>
+<div class="container" >
+	<article class="post">
+		<h1 class="post-title">Hello World</h1>
+		
+		<span class="post-date">2023/04/01 09:36 </span>
+		<div class="content post-con">
+			<p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+		</div>
+	</article>
+</div>
+ <footer class="footer grdnt-purple" id="a6">
+	<div class="container footer-content">
+		<div class="row footer-row">
+			<h3 class="clr-blue">联系我们 @mili</h3>
+			<p class="spce">Copyright © 2023 粤ICP备2022004158号</p>
+		</div>
+	</div>
+</footer>
+
+
+
+  
+<script src="/bootstrap.min.js"></script>
+
+  
+<script src="/swiper-bundle.min.js"></script>
+
+	  <script>
+	  	$(function() {
+	  		
+	  		var swiper = new Swiper(".mySwiper", {
+	  			slidesPerView: 'auto',//重要的
+	  			loop: true, 
+	  			autoplay:true,//自动切换
+	  			navigation: {
+	  			  nextEl: '.swiper-button-next',
+	  			  prevEl: '.swiper-button-prev',
+	  			},
+	  		});
+	  		
+	  		
+	  		// 导航条变白底
+	  		var wintop = $(window).scrollTop();
+	  		
+	  		let $fixedheader = $('.navbar-custom'); // fixed容器
+	  		if (wintop > 100) {
+	  			// fixedheader.hide();
+	  			$fixedheader.addClass("showtopface");
+	  		} else {
+	  			// fixedheader.show();
+	  			$fixedheader.removeClass("showtopface");
+	  		}
+	  		
+	  		$(window).on('scroll', () => {
+	  			let $fixedheader = $('.navbar-custom'); // fixed容器
+	  			// console.log(fixedheader);
+	  			var wintop = $(window).scrollTop(); // 已滚动卷去的高度
+	  			//console.log(wintop);
+	  			let winHeight = $(window).height(); // 可视窗口的高度
+	  			//console.log(winHeight);
+	  			// 卷去一个可视窗口高度后执行
+	  			/* if (wintop - winHeight > 0) {
+	  			    // fixedheader.hide();
+	  			    $fixedheader.addClass("showtopface");
+	  			} else {
+	  			    // fixedheader.show();
+	  			    $fixedheader.removeClass("showtopface");
+	  			} */
+	  			// 当滚动条离顶部100像素时的条件判断和执行动作
+	  			if (wintop > 100) {
+	  				// fixedheader.hide();
+	  				$fixedheader.addClass("showtopface");
+	  			} else {
+	  				// fixedheader.show();
+	  				$fixedheader.removeClass("showtopface");
+	  			}
+	  
+	  		});
+	  	});
+	  </script>
+</body>
+</html>
