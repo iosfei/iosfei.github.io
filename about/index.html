@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+ <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Websites</title>
+	
+	<meta name="keywords" content="这是网站关键词,这是网站关键词,这是网站关键词,这是网站关键词">
+	
+	
+	<meta name="description" content="这是网站描述,这是网站描述">
+	
+	
+	<!-- Bootstrap -->
+
+	<link rel="stylesheet" href="/bootstrap-icons.css">
+	<link rel="stylesheet" href="/swiper-bundle.min.css">
+	<link rel="stylesheet" href="/bootstrap.min.css">
+	<link rel="stylesheet" href="/style.css">
+	
+	
+<script src="/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+ 
+<body data-offset="0" data-spy="scroll" data-target="#navbar-example">
+
+
+<!-- 必须body,不能用index -->
+<!-- 点击文章 -->
+<div>
+  <h1></h1>
+      <div class="contents">
+        
+      </div>
+      <p>&lt;%- page.content %&gt; </p>
+
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80NTk3NS8yMjQ4Ng==">
+
+  </div>
+</div>
+
+
+
+
+  
+<script src="/bootstrap.min.js"></script>
+
+  
+<script src="/swiper-bundle.min.js"></script>
+
+	  <script>
+	  	$(function() {
+	  		
+	  		var swiper = new Swiper(".mySwiper", {
+	  			slidesPerView: 'auto',//重要的
+	  			loop: true, 
+	  			autoplay:true,//自动切换
+	  			navigation: {
+	  			  nextEl: '.swiper-button-next',
+	  			  prevEl: '.swiper-button-prev',
+	  			},
+	  		});
+	  		
+	  		
+	  		// 导航条变白底
+	  		var wintop = $(window).scrollTop();
+	  		
+	  		let $fixedheader = $('.navbar-custom'); // fixed容器
+	  		if (wintop > 100) {
+	  			// fixedheader.hide();
+	  			$fixedheader.addClass("showtopface");
+	  		} else {
+	  			// fixedheader.show();
+	  			$fixedheader.removeClass("showtopface");
+	  		}
+	  		
+	  		$(window).on('scroll', () => {
+	  			let $fixedheader = $('.navbar-custom'); // fixed容器
+	  			// console.log(fixedheader);
+	  			var wintop = $(window).scrollTop(); // 已滚动卷去的高度
+	  			//console.log(wintop);
+	  			let winHeight = $(window).height(); // 可视窗口的高度
+	  			//console.log(winHeight);
+	  			// 卷去一个可视窗口高度后执行
+	  			/* if (wintop - winHeight > 0) {
+	  			    // fixedheader.hide();
+	  			    $fixedheader.addClass("showtopface");
+	  			} else {
+	  			    // fixedheader.show();
+	  			    $fixedheader.removeClass("showtopface");
+	  			} */
+	  			// 当滚动条离顶部100像素时的条件判断和执行动作
+	  			if (wintop > 100) {
+	  				// fixedheader.hide();
+	  				$fixedheader.addClass("showtopface");
+	  			} else {
+	  				// fixedheader.show();
+	  				$fixedheader.removeClass("showtopface");
+	  			}
+	  
+	  		});
+	  	});
+	  </script>
+</body>
+</html>
